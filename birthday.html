@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Pakhi ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      min-height:100vh;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg,#ffdde1,#ee9ca7,#fad0c4);
+      overflow-x:hidden;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+    }
+
+    .floating-hearts span{
+      position:absolute;
+      bottom:-50px;
+      color:rgba(255,255,255,0.7);
+      animation:float 10s linear infinite;
+      font-size:20px;
+    }
+
+    .floating-hearts span:nth-child(1){
+      left:10%;
+      animation-delay:0s;
+    }
+
+    .floating-hearts span:nth-child(2){
+      left:25%;
+      animation-delay:2s;
+      font-size:30px;
+    }
+
+    .floating-hearts span:nth-child(3){
+      left:50%;
+      animation-delay:4s;
+    }
+
+    .floating-hearts span:nth-child(4){
+      left:70%;
+      animation-delay:1s;
+      font-size:25px;
+    }
+
+    .floating-hearts span:nth-child(5){
+      left:90%;
+      animation-delay:3s;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+      }
+      20%{
+        opacity:1;
+      }
+      100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+      }
+    }
+
+    /* POPUP */
+
+    .popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,0.55);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:9999;
+      animation:fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+    .gift-box{
+      width:90%;
+      max-width:420px;
+      background:linear-gradient(135deg,#ff8fab,#ffcad4);
+      border-radius:30px;
+      padding:35px 25px;
+      text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,0.3);
+      position:relative;
+      overflow:hidden;
+      animation:pop 0.8s ease;
+    }
+
+    @keyframes pop{
+      0%{
+        transform:scale(0.5);
+        opacity:0;
+      }
+      100%{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+    .gift-box h2{
+      font-size:2rem;
+      margin-bottom:12px;
+      color:white;
+    }
+
+    .gift-box p{
+      color:white;
+      line-height:1.7;
+      margin-bottom:20px;
+      font-size:1rem;
+    }
+
+    .gift-items{
+      font-size:3rem;
+      margin:20px 0;
+      animation:bounce 2s infinite;
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    .open-btn{
+      border:none;
+      outline:none;
+      padding:14px 28px;
+      border-radius:50px;
+      background:white;
+      color:#ff4f81;
+      font-weight:600;
+      font-size:1rem;
+      cursor:pointer;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .open-btn:hover{
+      transform:scale(1.05);
+    }
+
+    /* MAIN CARD */
+
+    .card{
+      width:100%;
+      max-width:850px;
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:30px;
+      padding:40px 30px;
+      text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,0.2);
+      position:relative;
+      overflow:hidden;
+      display:none;
+      animation:showCard 1s ease;
+    }
+
+    @keyframes showCard{
+      from{
+        opacity:0;
+        transform:translateY(20px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .glow{
+      position:absolute;
+      width:300px;
+      height:300px;
+      background:rgba(255,255,255,0.15);
+      border-radius:50%;
+      filter:blur(50px);
+      top:-100px;
+      right:-100px;
+    }
+
+    .title{
+      font-family:'Sacramento',cursive;
+      font-size:4rem;
+      margin-bottom:10px;
+      color:#fff;
+      text-shadow:0 0 15px rgba(255,255,255,0.6);
+    }
+
+    .subtitle{
+      font-size:1.2rem;
+      margin-bottom:30px;
+      color:#fff5f7;
+      font-weight:300;
+    }
+
+    .message{
+      background:rgba(255,255,255,0.1);
+      border-radius:25px;
+      padding:30px;
+      line-height:1.9;
+      font-size:1.05rem;
+      color:#fff;
+      text-align:left;
+      box-shadow: inset 0 0 15px rgba(255,255,255,0.08);
+    }
+
+    .message p{
+      margin-bottom:18px;
+    }
+
+    .highlight{
+      color:#ffe066;
+      font-weight:600;
+    }
+
+    .love{
+      margin-top:30px;
+      font-size:1.4rem;
+      text-align:center;
+      font-weight:600;
+      color:#fff8dc;
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+      }
+      50%{
+        transform:scale(1.05);
+      }
+      100%{
+        transform:scale(1);
+      }
+    }
+
+    .footer{
+      margin-top:30px;
+      font-size:0.95rem;
+      color:#fff0f5;
+      opacity:0.9;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:25px;
+      padding:14px 28px;
+      border-radius:50px;
+      text-decoration:none;
+      color:#ff4f81;
+      background:white;
+      font-weight:600;
+      transition:0.3s ease;
+      box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px) scale(1.05);
+    }
+
+    @media(max-width:768px){
+
+      .title{
+        font-size:3rem;
+      }
+
+      .card{
+        padding:30px 20px;
+      }
+
+      .message{
+        font-size:0.98rem;
+        padding:22px;
+      }
+
+      .love{
+        font-size:1.1rem;
+      }
+
+      .gift-box h2{
+        font-size:1.7rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- FIRST POPUP GIFT -->
+
+  <div class="popup" id="popup">
+
+    <div class="gift-box">
+
+      <h2>🎁 Surprise Pakhi 🎀</h2>
+
+      <p>
+        Here is a small gift from your <b>shonaaa</b> ❤️<br>
+        A little sweetness for the sweetest girl ever ✨
+      </p>
+
+      <div class="gift-items">
+        🍫 🎂 🍬 💖
+      </div>
+
+      <button class="open-btn" onclick="openGift()">
+        Open Your Surprise 💕
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- FLOATING HEARTS -->
+
+  <div class="floating-hearts">
+    <span>❤️</span>
+    <span>✨</span>
+    <span>💖</span>
+    <span>🌸</span>
+    <span>💕</span>
+  </div>
+
+  <!-- MAIN WEBSITE -->
+
+  <div class="card" id="mainCard">
+
+    <div class="glow"></div>
+
+    <h1 class="title">Happy Birthday Pakhi ❤️</h1>
+
+    <p class="subtitle">
+      To the most precious soul in my life ✨
+    </p>
+
+    <div class="message">
+
+      <p>
+        Happy Birthday to my sweetest <span class="highlight">jaan</span> 💖
+      </p>
+
+      <p>
+        Today is not just another day… today is the day the world got blessed with someone as beautiful, caring, soft-hearted and special as you, baby. Honestly, I don’t think words will ever be enough to describe how much you mean to me.
+      </p>
+
+      <p>
+        You are the kind of person who makes ordinary moments feel magical. Your smile brings peace, your presence brings comfort, and your little talks somehow make every bad day feel lighter. Having you in my life is truly one of the best things that ever happened to me.
+      </p>
+
+      <p>
+        Pakhi, I hope this birthday brings you endless happiness, cute surprises, genuine smiles, warm hugs, and all the love your heart deserves. You deserve to feel valued every single day because you are truly irreplaceable.
+      </p>
+
+      <p>
+        Thank you for being my safe place, my happiness, my favorite notification, and the person I can never get tired of talking to. No matter what happens, I’ll always pray for your smile, your success, and your peace.
+      </p>
+
+      <p>
+        And baby… if I could gift you one thing today, it would be the ability to see yourself through my eyes, so you could realize just how special and precious you really are.
+      </p>
+
+      <div class="love">
+        “ami tomake onek onek beshi bhalobashiii” ❤️
+      </div>
+
+    </div>
+
+    <a href="#" class="btn">Forever Your Person 💕</a>
+
+    <div class="footer">
+      Made with endless love, care & lots of feelings ✨
+    </div>
+
+  </div>
+
+  <script>
+
+    function openGift(){
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("mainCard").style.display = "block";
+    }
+
+  </script>
+
+</body>
+</html>
